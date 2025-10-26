@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://krt.moe/posts/chuqin-251026/</loc>
+    
+    <lastmod>2025-10-26T15:39:27.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://krt.moe/posts/hello-world/</loc>
+    
+    <lastmod>2025-10-26T15:26:33.352Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://krt.moe/posts/maimai-star-tutorial/</loc>
     
-    <lastmod>2025-10-18T14:00:00.777Z</lastmod>
+    <lastmod>2025-10-26T06:49:24.697Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://krt.moe/linklist-example/index.html</loc>
     
     <lastmod>2025-10-16T02:41:25.873Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://krt.moe/posts/hello-world/</loc>
-    
-    <lastmod>2025-10-16T02:41:25.801Z</lastmod>
     
   </url>
   
