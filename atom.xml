@@ -6,7 +6,7 @@
   <link href="https://krt.moe/atom.xml" rel="self"/>
   
   <link href="https://krt.moe/"/>
-  <updated>2025-10-26T15:40:44.738Z</updated>
+  <updated>2025-11-01T05:56:35.058Z</updated>
   <id>https://krt.moe/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pintia-二进制回文</title>
+    <link href="https://krt.moe/posts/pintia-251101/"/>
+    <id>https://krt.moe/posts/pintia-251101/</id>
+    <published>2025-11-01T05:32:13.000Z</published>
+    <updated>2025-11-01T05:56:35.058Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h1><p>计算鸭定义二进制的回文为一个数的二进制 (不补前置零) 是一个回文数。<br>给定两个数 $x,y$，求从 $x$ 到 $y$ 之间所有的正整数（包括 $x,y$）中满足其二进制是一个回文的数的个数。</p><p><strong>输入格式:</strong><br>输入两个正整数 $x,y(1≤x,y≤100000)$。</p><p><strong>输出格式:</strong><br>输出二进制是回文的数的个数。</p><h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1><p>乍一看十分简单，数据范围很小可以直接暴力。</p><p>想要判断一个数的二进制是否为回文，只要把这个数的二进制表示反转，然后判断与原数是否相等就行了。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">is_binary_palindrome</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="type">int</span> ori = x;</span><br><span class="line">    <span class="type">int</span> rev = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x) &#123;</span><br><span class="line">        rev = (rev &lt;&lt; <span class="number">1</span>) | (x&amp;<span class="number">1</span>);</span><br><span class="line">        x &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> rev == ori;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>于是信心满满提交：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdbool.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">is_binary_palindrome</span><span class="params">(<span class="type">int</span> x)</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a, b, ans = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = a; i &lt;= b; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (is_binary_palindrome(i)) ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>喜提 <font color="red">WA</font> 55分。</p><p>主播当时百思不得其解，更换了无数种写法，各种询问 AI，但都是 55 分。</p><p>虽然此题十分冷门，但主播经过不懈努力还是找到了一段 <font color="lime">AC</font> 代码，其中赫然写着：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a &gt; b) swap(a, b);</span><br></pre></td></tr></table></figure><p>天杀的出题人。</p><p>加上之后果然 <font color="lime">AC</font> 了。</p>]]></content>
+    
+    
+    <summary type="html">一道简单但十分逆天的题目</summary>
+    
+    
+    
+    <category term="题解" scheme="https://krt.moe/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>chuqin-251026</title>
