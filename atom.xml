@@ -6,7 +6,7 @@
   <link href="https://krt.moe/atom.xml" rel="self"/>
   
   <link href="https://krt.moe/"/>
-  <updated>2025-11-03T19:34:53.130Z</updated>
+  <updated>2025-11-05T10:21:55.990Z</updated>
   <id>https://krt.moe/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 远程桌面提示“凭据不正确”解决方案</title>
+    <link href="https://krt.moe/posts/windows-rd/"/>
+    <id>https://krt.moe/posts/windows-rd/</id>
+    <published>2025-11-05T10:18:07.000Z</published>
+    <updated>2025-11-05T10:21:55.990Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>原因是这个电脑上没有“记录”你的微软账号，在 cmd 中运行 <code>runas /u:MicrosoftAccount\你微软账号的邮箱 cmd.exe</code>，然后输入密码，这个时候相当于“记录”你的微软账号了。然后再用微软账号和密码去远程连接这台电脑就能正常工作了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;原因是这个电脑上没有“记录”你的微软账号，在 cmd 中运行 &lt;code&gt;r</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://krt.moe/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>luogu P12191 [蓝桥杯 2025 省研究生组] 01 串</title>
